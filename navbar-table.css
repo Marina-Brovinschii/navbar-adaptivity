@@ -63,14 +63,13 @@ button:hover {
     display: table-row;
     text-align: center;
 }
-
 .bottom span input:checked+label::after {
     content: "▲";
 }
 span {
     font-family: 'Mooli', sans-serif;
+    position: relative;
 }
-
 .bottom a {
     text-decoration: none;
     color:rgb(122, 89, 5);
@@ -79,11 +78,14 @@ span {
     font-size: 20px;
     padding: 10px 40px;
 }
-
 .bottom a:hover {
     background-color: thistle;
 }
-
+.bottom ul {
+    position: absolute;
+    left: 1%;
+    padding-left: 0;
+}
 .bottom li a {
     color: rgb(103, 102, 102);
     font-size: 16px;
@@ -91,7 +93,6 @@ span {
     display: block;
     padding: 5px;
 }
-
 .bottom li a:hover {
     color: brown;
     background-color: coral;
@@ -196,5 +197,55 @@ span {
 }
 
 @media (max-width:800px) {
- 
+.table .info {
+    display: none;
+}
+.table img {
+    margin-left: 8%;
+}
+.bottom {
+    display: flex;
+    flex-direction: column;
+}
+.bottom span {
+    align-self: center;
+    margin-bottom: -2%;
+}
+.bottom span label {
+    font-size: 13px;
+    padding: 5px 10px;
+}
+.bottom span li {
+    display: none;
+}
+.bottom span label::after {
+    content: "";
+}
+.bottom span input:checked+label::after {
+    content: "";
+}
+.personal {
+    display: flex;
+    margin-top: -5%;
+    flex-flow: column;
+}
+.personal h2 {
+    width: 100%;
+    font-size: 150%;
+}
+.personal h3 {
+    display: none;
+}
+.personal figure {
+    margin: auto;
+    padding-bottom: 5%;
+}
+.personal figure img {
+    width: 150px;
+    height: 150px;
+}
+.personal figure figcaption {
+    text-align: center;
+    font-size: 90%;
+}
 }
